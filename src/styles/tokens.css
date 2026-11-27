@@ -24,7 +24,7 @@
 @theme {
   --color-deep: #0b2a3c;
   --color-deep-tint: color-mix(in srgb, #0b2a3c 96%, #e8f1f2);
-  --color-current: #14506b;
+  /* No --color-current: Tailwind's bg-current means currentColor. Use bg-(--current). */
   --color-shallow: #2e8c9a;
   --color-foam: #e8f1f2;
   --color-silt: #9fb4bc;

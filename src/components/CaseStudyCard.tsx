@@ -40,7 +40,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
   return (
     <article
       aria-labelledby={`${study.slug}-title`}
-      className={`flex flex-col overflow-hidden rounded-[12px] bg-current shadow-[0_12px_32px_rgba(0,0,0,0.25)] ${
+      className={`flex flex-col overflow-hidden rounded-[12px] bg-(--current) shadow-[0_12px_32px_rgba(0,0,0,0.25)] ${
         open ? "lg:col-span-2" : ""
       }`}
     >

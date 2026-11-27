@@ -27,7 +27,7 @@ export function Timeline() {
                 <span className="absolute top-[26px] left-1/2 h-4 w-4 -translate-x-1/2 rounded-full border-[3px] border-shallow bg-deep-tint" />
               </div>
               <Reveal delay={i * 0.05}>
-                <div className="rounded-[12px] bg-current p-6 shadow-[0_8px_24px_rgba(0,0,0,0.2)]">
+                <div className="rounded-[12px] bg-(--current) p-6 shadow-[0_8px_24px_rgba(0,0,0,0.2)]">
                   <h3 className="text-2xl text-foam">{r.title}</h3>
                   <p className="mt-1 text-base text-foam">
                     {r.org} · {r.location}

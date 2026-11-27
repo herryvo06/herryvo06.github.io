@@ -140,7 +140,7 @@ export function FlowDiagram() {
             </ol>
 
             {note && (
-              <p id={`${baseId}-note`} className="mt-8 max-w-[68ch] rounded-[12px] border-l-4 border-dusk bg-current p-6 text-foam">
+              <p id={`${baseId}-note`} className="mt-8 max-w-[68ch] rounded-[12px] border-l-4 border-dusk bg-(--current) p-6 text-foam">
                 {note}
               </p>
             )}
