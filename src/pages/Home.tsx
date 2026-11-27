@@ -3,6 +3,7 @@ import { Hero } from "../components/Hero";
 import { Nav } from "../components/Nav";
 import { RiverLine } from "../components/RiverLine";
 import { TheCatch } from "../components/TheCatch";
+import { Timeline } from "../components/Timeline";
 import { sectionOrder } from "../content/site";
 import { useActiveSection } from "../lib/useActiveSection";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <FlowDiagram />
         <TheCatch />
+        <Timeline />
       </main>
     </>
   );
