@@ -42,7 +42,7 @@ export function CuaHoi({ className }: { className?: string }) {
       <Tree x={128} y={99} variant={1} scale={0.7} />
 
       {/* Band 3: the sea, with the sun's reflection */}
-      <Water y={150} width={1100} height={110} grain />
+      <Water y={150} width={1100} height={110} />
       <g stroke="var(--dusk)" strokeLinecap="round" strokeWidth="1.5">
         <line x1="818" x2="902" y1="160" y2="160" strokeOpacity="0.8" />
         <line x1="834" x2="886" y1="172" y2="172" strokeOpacity="0.6" />

@@ -1,6 +1,10 @@
 import { useId } from "react";
 
-/** Water: surface-to-deep gradient band, optional --dusk reflection line and ≤4% grain. */
+/**
+ * Water: surface-to-deep gradient band, optional --dusk reflection line and ≤4% grain.
+ * Note: the feTurbulence grain costs ~1.5s of main-thread raster on large areas, so scenes
+ * leave it off (Lighthouse TBT). Only use it on small areas.
+ */
 type Props = {
   x?: number;
   y: number;
