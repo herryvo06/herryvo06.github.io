@@ -12,7 +12,9 @@ const s = sections.source;
 export function Hero() {
   return (
     <section id={s.id} aria-labelledby="hero-name" className="relative bg-deep">
-      <div className={`${container} relative grid min-h-[calc(100vh-var(--nav-h))] grid-cols-1 items-center gap-6 pt-6 pb-20 lg:grid-cols-12`}>
+      <div
+        className={`${container} relative grid min-h-[calc(100vh-var(--nav-h))] grid-cols-1 items-center gap-6 pt-6 pb-20 lg:grid-cols-12`}
+      >
         <div className="lg:col-span-7">
           <p className="km-label">
             {s.km} · {s.name.toUpperCase()} ·{" "}
@@ -28,7 +30,9 @@ export function Hero() {
             <TypedLine facts={profile.typedFacts} label={profile.typedFactsLabel} />
           </div>
           <p className="mt-4 max-w-[60ch] text-silt">{profile.pitch}</p>
-          <p className={`${chip} mt-5 border border-shallow bg-deep-tint text-foam`}>{profile.status}</p>
+          <p className={`${chip} mt-5 border border-shallow bg-deep-tint text-foam`}>
+            {profile.status}
+          </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a href={profile.resumeUrl} download className={btnPrimary}>
               <DownloadIcon />
@@ -38,13 +42,23 @@ export function Hero() {
               <MailIcon />
               {ui.emailMe}
             </a>
-            <a href={profile.links.github} target="_blank" rel="noopener noreferrer" className={iconLink}>
+            <a
+              href={profile.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={iconLink}
+            >
               <GitHubIcon />
               <span className="sr-only">
                 {ui.github} {ui.newTabHint}
               </span>
             </a>
-            <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className={iconLink}>
+            <a
+              href={profile.links.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={iconLink}
+            >
               <LinkedInIcon />
               <span className="sr-only">
                 {ui.linkedin} {ui.newTabHint}
@@ -60,7 +74,13 @@ export function Hero() {
           href="#flows"
           className="mono absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1 rounded-full px-3 py-1 text-silt hover:text-foam"
         >
-          <svg width="24" height="34" viewBox="-12 -24 24 34" aria-hidden="true" className="anim-bob">
+          <svg
+            width="24"
+            height="34"
+            viewBox="-12 -24 24 34"
+            aria-hidden="true"
+            className="anim-bob"
+          >
             <Float />
           </svg>
           {ui.scrollCue}
@@ -80,7 +100,10 @@ export function Hero() {
         </m.p>
         <ul className="flex flex-wrap content-start gap-3 lg:col-span-5 lg:justify-end">
           {profile.stats.map((stat) => (
-            <li key={stat.label} className={`${chip} gap-2 border border-shallow bg-deep-tint py-2 text-foam`}>
+            <li
+              key={stat.label}
+              className={`${chip} gap-2 border border-shallow bg-deep-tint py-2 text-foam`}
+            >
               <span className="font-semibold text-dusk">{stat.value}</span>
               {stat.label}
             </li>

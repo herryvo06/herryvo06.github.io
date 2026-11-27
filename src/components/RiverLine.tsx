@@ -21,9 +21,23 @@ export function RiverLine({ stations, active }: { stations: readonly string[]; a
   const activeIndex = stations.indexOf(active ?? "");
 
   return (
-    <div aria-hidden="true" className="pointer-events-none fixed top-[calc(var(--nav-h)+16px)] bottom-6 left-4 z-40 hidden w-8 lg:block">
-      <svg viewBox="0 0 32 1000" preserveAspectRatio="none" className="absolute inset-0 h-full w-full overflow-visible">
-        <path d={d} fill="none" stroke="var(--shallow)" strokeOpacity="0.35" strokeWidth="3" vectorEffect="non-scaling-stroke" />
+    <div
+      aria-hidden="true"
+      className="pointer-events-none fixed top-[calc(var(--nav-h)+16px)] bottom-6 left-4 z-40 hidden w-8 lg:block"
+    >
+      <svg
+        viewBox="0 0 32 1000"
+        preserveAspectRatio="none"
+        className="absolute inset-0 h-full w-full overflow-visible"
+      >
+        <path
+          d={d}
+          fill="none"
+          stroke="var(--shallow)"
+          strokeOpacity="0.35"
+          strokeWidth="3"
+          vectorEffect="non-scaling-stroke"
+        />
         <path
           d={d}
           fill="none"

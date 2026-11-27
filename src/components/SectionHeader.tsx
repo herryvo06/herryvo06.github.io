@@ -1,5 +1,12 @@
 /** KM marker + section title + optional Vietnamese accent (DESIGN.md 3.4). */
-type Props = { km: string; name: string; vn?: string; title?: string; titleId: string; level?: 1 | 2 };
+type Props = {
+  km: string;
+  name: string;
+  vn?: string;
+  title?: string;
+  titleId: string;
+  level?: 1 | 2;
+};
 
 export function SectionHeader({ km, name, vn, title, titleId, level = 2 }: Props) {
   const label = [km, name.toUpperCase()].join(" · ");

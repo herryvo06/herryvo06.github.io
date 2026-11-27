@@ -60,7 +60,9 @@ export function FlowDiagram() {
                 onClick={() => select(i)}
                 onKeyDown={onKeyDown}
                 className={`ripple min-h-11 rounded-full px-5 text-base transition-colors duration-200 ${
-                  isSel ? "bg-dusk font-semibold text-deep" : "border-2 border-shallow text-foam hover:border-dusk"
+                  isSel
+                    ? "bg-dusk font-semibold text-deep"
+                    : "border-2 border-shallow text-foam hover:border-dusk"
                 }`}
               >
                 {f.label}
@@ -103,11 +105,16 @@ export function FlowDiagram() {
               />
             </svg>
 
-            <ol className="relative grid gap-6" style={{ gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))` }}>
+            <ol
+              className="relative grid gap-6"
+              style={{ gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))` }}
+            >
               {tab.nodes.map((node, i) => {
                 const station = (
                   <>
-                    <span className="km-label block h-12 text-center">{stageNames[node.stage]}</span>
+                    <span className="km-label block h-12 text-center">
+                      {stageNames[node.stage]}
+                    </span>
                     <span
                       aria-hidden="true"
                       className={`mx-auto my-4 block h-6 w-6 rounded-full border-[3px] ${
@@ -140,7 +147,10 @@ export function FlowDiagram() {
             </ol>
 
             {note && (
-              <p id={`${baseId}-note`} className="mt-8 max-w-[68ch] rounded-[12px] border-l-4 border-dusk bg-(--current) p-6 text-foam">
+              <p
+                id={`${baseId}-note`}
+                className="mt-8 max-w-[68ch] rounded-[12px] border-l-4 border-dusk bg-(--current) p-6 text-foam"
+              >
                 {note}
               </p>
             )}

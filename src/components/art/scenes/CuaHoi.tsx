@@ -5,11 +5,20 @@ import { Hills, Ripple, Tree, Water } from "..";
 export function CuaHoi({ className }: { className?: string }) {
   const id = useId();
   return (
-    <svg viewBox="0 0 1100 260" className={className} aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMax slice">
+    <svg
+      viewBox="0 0 1100 260"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+      preserveAspectRatio="xMidYMax slice"
+    >
       <defs>
         <linearGradient id={`${id}-sky`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" style={{ stopColor: "var(--deep)" }} />
-          <stop offset="1" style={{ stopColor: "color-mix(in srgb, var(--current) 75%, var(--deep))" }} />
+          <stop
+            offset="1"
+            style={{ stopColor: "color-mix(in srgb, var(--current) 75%, var(--deep))" }}
+          />
         </linearGradient>
         <radialGradient id={`${id}-glow`} cx="0.5" cy="1" r="0.5">
           <stop offset="0" style={{ stopColor: "var(--dusk)" }} stopOpacity="0.4" />
@@ -28,10 +37,7 @@ export function CuaHoi({ className }: { className?: string }) {
       </g>
 
       {/* Band 2: far bank on the left, where the river comes from */}
-      <Hills
-        tone="far"
-        d="M0 104 C70 92 150 98 230 122 C262 132 290 142 320 150 H0 Z"
-      />
+      <Hills tone="far" d="M0 104 C70 92 150 98 230 122 C262 132 290 142 320 150 H0 Z" />
       <Tree x={96} y={98} variant={0} scale={0.8} />
       <Tree x={128} y={99} variant={1} scale={0.7} />
 
@@ -44,10 +50,7 @@ export function CuaHoi({ className }: { className?: string }) {
       </g>
 
       {/* Band 4: near bank, the river mouth opens between the two banks */}
-      <Hills
-        tone="shore"
-        d="M0 206 C120 204 230 222 330 244 C360 251 380 256 400 260 H0 Z"
-      />
+      <Hills tone="shore" d="M0 206 C120 204 230 222 330 244 C360 251 380 256 400 260 H0 Z" />
       <Ripple x={360} y={186} rings={3} spread={18} />
     </svg>
   );

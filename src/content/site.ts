@@ -135,7 +135,8 @@ export const sectionOrder = ["source", "flows", "catch", "experience", "contact"
 
 // ── KM 5 · How my data flows ─────────────────────────────────────────────────
 
-export const flowIntro = "Every pipeline starts upstream. Pick a project and follow its data to the sea.";
+export const flowIntro =
+  "Every pipeline starts upstream. Pick a project and follow its data to the sea.";
 
 export const stageNames: Record<FlowStage, string> = {
   source: "Sources",
@@ -247,7 +248,10 @@ export const caseStudies: CaseStudy[] = [
       height: 650,
     },
     links: [
-      { label: "Repo", url: "https://github.com/herryvo06/Southeast-Asia-Financial-Flows-Analytics" },
+      {
+        label: "Repo",
+        url: "https://github.com/herryvo06/Southeast-Asia-Financial-Flows-Analytics",
+      },
     ],
     status: "done",
   },

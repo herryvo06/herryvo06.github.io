@@ -17,8 +17,18 @@ beforeAll(() => {
 // Exact strings from public/resume.pdf (titles, organisations, locations, dates).
 const RESUME = [
   ["Data Support Assistant", "ITS Team, Knox College", "Galesburg, IL", "Sep 2026 – Present"],
-  ["EdTech Analytics Assistant", "Brightspace LMS Team, Knox College", "Galesburg, IL", "Aug 2026 – Present"],
-  ["SQL & Database Architecture Extern", "Extern | Breaking Games", "Remote", "Aug 2026 – Oct 2026"],
+  [
+    "EdTech Analytics Assistant",
+    "Brightspace LMS Team, Knox College",
+    "Galesburg, IL",
+    "Aug 2026 – Present",
+  ],
+  [
+    "SQL & Database Architecture Extern",
+    "Extern | Breaking Games",
+    "Remote",
+    "Aug 2026 – Oct 2026",
+  ],
   [
     "Undergraduate Researcher – Dickson Self-reciprocal Polynomials",
     "Knox College | Advisor: Prof. Neranga Fernando",

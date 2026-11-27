@@ -2,7 +2,15 @@ import type { ReactNode } from "react";
 import { m } from "framer-motion";
 
 /** Scroll-in reveal, once per element, 400ms ease-out (DESIGN.md 3.5). */
-export function Reveal({ children, className, delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
+export function Reveal({
+  children,
+  className,
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
   return (
     <m.div
       className={className}

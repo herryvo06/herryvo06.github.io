@@ -13,7 +13,10 @@ export function Timeline() {
         <SectionHeader km={s.km} name={s.name} title={s.title} titleId={`${s.id}-title`} />
         <ol className="relative">
           {roles.map((r, i) => (
-            <li key={`${r.title}-${r.start}`} className="grid grid-cols-1 gap-x-6 pb-8 last:pb-0 lg:grid-cols-[200px_32px_1fr]">
+            <li
+              key={`${r.title}-${r.start}`}
+              className="grid grid-cols-1 gap-x-6 pb-8 last:pb-0 lg:grid-cols-[200px_32px_1fr]"
+            >
               <p className="mono pt-6 text-silt lg:text-right">
                 {r.start} – {r.end}
               </p>

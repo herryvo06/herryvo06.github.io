@@ -144,7 +144,9 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
                     {p}
                   </p>
                 ))}
-                {study.judgement && <p className="mt-4 border-l-4 border-dusk pl-4">{study.judgement}</p>}
+                {study.judgement && (
+                  <p className="mt-4 border-l-4 border-dusk pl-4">{study.judgement}</p>
+                )}
               </Block>
             )}
 
@@ -193,7 +195,11 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
 
 function Block({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
-    <section id={id} aria-labelledby={`${id}-h`} className="scroll-mt-[calc(var(--nav-h)+24px)] text-foam">
+    <section
+      id={id}
+      aria-labelledby={`${id}-h`}
+      className="scroll-mt-[calc(var(--nav-h)+24px)] text-foam"
+    >
       <h4 id={`${id}-h`} className="mb-3 font-display text-2xl text-foam">
         {title}
       </h4>

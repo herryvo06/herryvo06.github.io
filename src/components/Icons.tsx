@@ -1,6 +1,12 @@
 /** Small UI icons (not illustrations). Always paired with a visible or sr-only label. */
 type P = { className?: string };
-const base = { width: 20, height: 20, viewBox: "0 0 24 24", "aria-hidden": true, focusable: false } as const;
+const base = {
+  width: 20,
+  height: 20,
+  viewBox: "0 0 24 24",
+  "aria-hidden": true,
+  focusable: false,
+} as const;
 
 export const GitHubIcon = ({ className }: P) => (
   <svg {...base} className={className} fill="currentColor">
@@ -15,14 +21,30 @@ export const LinkedInIcon = ({ className }: P) => (
 );
 
 export const MailIcon = ({ className }: P) => (
-  <svg {...base} className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    {...base}
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <rect x="3" y="5" width="18" height="14" rx="2" />
     <path d="m3 7 9 6 9-6" />
   </svg>
 );
 
 export const DownloadIcon = ({ className }: P) => (
-  <svg {...base} className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    {...base}
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16" />
   </svg>
 );

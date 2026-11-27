@@ -5,7 +5,9 @@ export function useActiveSection(ids: readonly string[]): string {
   const [active, setActive] = useState(ids[0]);
 
   useEffect(() => {
-    const els = ids.map((id) => document.getElementById(id)).filter((el): el is HTMLElement => !!el);
+    const els = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el);
     if (!els.length || typeof IntersectionObserver === "undefined") return;
     const observer = new IntersectionObserver(
       (entries) => {

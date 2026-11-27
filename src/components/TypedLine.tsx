@@ -20,10 +20,13 @@ export function TypedLine({ facts, label }: { facts: string[]; label: string }) 
       const t = setTimeout(() => setChars((c) => c + 1), TYPE_MS);
       return () => clearTimeout(t);
     }
-    const t = setTimeout(() => {
-      setIndex((i) => (i + 1) % facts.length);
-      setChars(0);
-    }, ROTATE_MS - fact.length * TYPE_MS);
+    const t = setTimeout(
+      () => {
+        setIndex((i) => (i + 1) % facts.length);
+        setChars(0);
+      },
+      ROTATE_MS - fact.length * TYPE_MS,
+    );
     return () => clearTimeout(t);
   }, [chars, fact, facts.length, reduce]);
 

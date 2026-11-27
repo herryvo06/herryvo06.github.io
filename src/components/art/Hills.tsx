@@ -30,7 +30,14 @@ export function Hills({ d, tone = "far", highlight, className }: Props) {
       </defs>
       <path d={d} fill={`url(#${id}-hill)`} />
       {highlight && (
-        <path d={highlight} fill="none" stroke="var(--foam)" strokeOpacity="0.4" strokeWidth="1.5" strokeLinecap="round" />
+        <path
+          d={highlight}
+          fill="none"
+          stroke="var(--foam)"
+          strokeOpacity="0.4"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
       )}
     </g>
   );

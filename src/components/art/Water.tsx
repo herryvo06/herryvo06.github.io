@@ -19,14 +19,29 @@ export function Water({ x = 0, y, width, height, d, reflection, grain = false, c
   return (
     <g className={className}>
       <defs>
-        <linearGradient id={`${id}-water`} x1="0" y1={y} x2="0" y2={y + height} gradientUnits="userSpaceOnUse">
-          <stop offset="0" style={{ stopColor: "color-mix(in srgb, var(--current) 70%, var(--shallow))" }} />
+        <linearGradient
+          id={`${id}-water`}
+          x1="0"
+          y1={y}
+          x2="0"
+          y2={y + height}
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop
+            offset="0"
+            style={{ stopColor: "color-mix(in srgb, var(--current) 70%, var(--shallow))" }}
+          />
           <stop offset="0.45" style={{ stopColor: "var(--current)" }} />
           <stop offset="1" style={{ stopColor: "var(--deep)" }} />
         </linearGradient>
         {grain && (
           <filter id={`${id}-grain`} x="0" y="0" width="100%" height="100%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.9"
+              numOctaves="2"
+              stitchTiles="stitch"
+            />
             <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.04 0" />
             <feComposite in2="SourceGraphic" operator="in" />
           </filter>

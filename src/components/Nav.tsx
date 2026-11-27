@@ -16,10 +16,15 @@ export function Nav({ active }: { active?: string }) {
   return (
     <header
       className={`sticky top-0 z-50 h-[var(--nav-h)] transition-colors duration-300 ease-out ${
-        scrolled ? "bg-deep/85 backdrop-blur-md [-webkit-backdrop-filter:blur(12px)] shadow-[0_1px_0_rgba(232,241,242,0.08)]" : "bg-transparent"
+        scrolled
+          ? "bg-deep/85 backdrop-blur-md [-webkit-backdrop-filter:blur(12px)] shadow-[0_1px_0_rgba(232,241,242,0.08)]"
+          : "bg-transparent"
       }`}
     >
-      <nav aria-label={ui.mainNavLabel} className="mx-auto flex h-full w-full max-w-[1228px] items-center gap-8 px-6 lg:px-16">
+      <nav
+        aria-label={ui.mainNavLabel}
+        className="mx-auto flex h-full w-full max-w-[1228px] items-center gap-8 px-6 lg:px-16"
+      >
         <a href="/#source" aria-label={ui.homeLabel} className="font-display text-2xl text-foam">
           {profile.logo}
         </a>
