@@ -1,3 +1,4 @@
+import { Footer } from "../components/Footer";
 import { FlowDiagram } from "../components/FlowDiagram";
 import { Hero } from "../components/Hero";
 import { Nav } from "../components/Nav";
@@ -19,6 +20,7 @@ export default function Home() {
         <TheCatch />
         <Timeline />
       </main>
+      <Footer />
     </>
   );
 }

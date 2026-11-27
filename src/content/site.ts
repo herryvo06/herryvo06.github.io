@@ -122,7 +122,13 @@ export const sections = {
   flows: { id: "flows", km: "KM 5", name: "How my data flows", title: "How my data flows" },
   catch: { id: "catch", km: "KM 20", name: "The Catch", title: "The Catch", vn: "Mẻ cá" },
   experience: { id: "experience", km: "KM 30", name: "Downstream", title: "Downstream" },
-  contact: { id: "contact", km: "KM 50", name: "Cửa Hội", title: "You've reached the sea. Let's talk." },
+  contact: {
+    id: "contact",
+    km: "KM 50",
+    name: "The sea",
+    vn: "Cửa Hội",
+    title: "You've reached the sea. Let's talk.",
+  },
 } as const;
 
 export const sectionOrder = ["source", "flows", "catch", "experience", "contact"] as const;
