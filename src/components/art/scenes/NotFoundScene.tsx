@@ -14,9 +14,19 @@ export function NotFoundScene({ className }: { className?: string }) {
             style={{ stopColor: "color-mix(in srgb, var(--current) 60%, var(--deep))" }}
           />
         </linearGradient>
+        {/* Soft oval vignette so the scene melts into the page instead of sitting in a box. */}
+        <radialGradient id={`${id}-fade`} cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0.55" stopColor="#fff" stopOpacity="1" />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
+        </radialGradient>
+        <mask id={`${id}-mask`}>
+          <rect width="320" height="260" fill={`url(#${id}-fade)`} />
+        </mask>
       </defs>
-      <rect width="320" height="110" fill={`url(#${id}-sky)`} />
-      <Water y={110} width={320} height={150} reflection={{ x1: 220, x2: 262, y: 122 }} />
+      <g mask={`url(#${id}-mask)`}>
+        <rect width="320" height="110" fill={`url(#${id}-sky)`} />
+        <Water y={110} width={320} height={150} reflection={{ x1: 200, x2: 238, y: 122 }} />
+      </g>
 
       {/* line from the rod tip (off-canvas, upper right) to the float */}
       <path
