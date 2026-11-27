@@ -1,3 +1,4 @@
+import { Hero } from "../components/Hero";
 import { Nav } from "../components/Nav";
 import { RiverLine } from "../components/RiverLine";
 import { sectionOrder } from "../content/site";
@@ -9,7 +10,9 @@ export default function Home() {
     <>
       <Nav active={active} />
       <RiverLine stations={sectionOrder} active={active} />
-      <main id="main" tabIndex={-1} className="outline-none" />
+      <main id="main" tabIndex={-1} className="outline-none">
+        <Hero />
+      </main>
     </>
   );
 }
