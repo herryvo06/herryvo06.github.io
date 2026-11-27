@@ -85,7 +85,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
             {study.links.map((l) => (
               <a key={l.url} href={l.url} {...ext} className={btnSecondary}>
                 {l.label}
-                <span className="sr-only">{ui.newTabHint}</span>
+                <span className="sr-only"> {ui.newTabHint}</span>
               </a>
             ))}
           </div>
