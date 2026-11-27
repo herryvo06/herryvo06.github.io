@@ -116,6 +116,49 @@
   }
 }
 
+/* Scene motion (all disabled under prefers-reduced-motion below). */
+.anim-bob {
+  animation: bob 2.4s ease-in-out infinite;
+  transform-box: fill-box;
+}
+.anim-flow {
+  stroke-dasharray: 6 10;
+  animation: flow 1.6s linear infinite;
+}
+.anim-ripple {
+  animation: ripple-out 3s ease-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+@keyframes flow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+@keyframes ripple-out {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.85);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1.1);
+  }
+}
+
 @keyframes ripple {
   from {
     opacity: 0.6;
