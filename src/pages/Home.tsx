@@ -1,3 +1,4 @@
+import { FlowDiagram } from "../components/FlowDiagram";
 import { Hero } from "../components/Hero";
 import { Nav } from "../components/Nav";
 import { RiverLine } from "../components/RiverLine";
@@ -12,6 +13,7 @@ export default function Home() {
       <RiverLine stations={sectionOrder} active={active} />
       <main id="main" tabIndex={-1} className="outline-none">
         <Hero />
+        <FlowDiagram />
       </main>
     </>
   );
