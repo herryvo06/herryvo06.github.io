@@ -2,6 +2,7 @@ import { FlowDiagram } from "../components/FlowDiagram";
 import { Hero } from "../components/Hero";
 import { Nav } from "../components/Nav";
 import { RiverLine } from "../components/RiverLine";
+import { TheCatch } from "../components/TheCatch";
 import { sectionOrder } from "../content/site";
 import { useActiveSection } from "../lib/useActiveSection";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <main id="main" tabIndex={-1} className="outline-none">
         <Hero />
         <FlowDiagram />
+        <TheCatch />
       </main>
     </>
   );
