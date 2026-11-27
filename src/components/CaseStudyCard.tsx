@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { m } from "framer-motion";
-import { caseStudyHeadings as H, ui, type CaseStudy } from "../content/site";
+import { caseStudyHeadings as H, caseStudyNav, ui, type CaseStudy } from "../content/site";
 import { btnPrimary, btnSecondary, chip } from "../lib/ui";
 
 const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
@@ -105,7 +105,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
               {sectionsList.map(({ key }) => (
                 <li key={key}>
                   <a href={`#${study.slug}-${key}`} className="mono text-foam hover:text-dusk">
-                    {H[key].replace(/^The /, "")}
+                    {caseStudyNav[key]}
                   </a>
                 </li>
               ))}

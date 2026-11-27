@@ -201,6 +201,16 @@ export const caseStudyHeadings = {
   links: "Links",
 };
 
+/** Short labels for the expanded case study's sticky mini-nav (wireframe 4.1). */
+export const caseStudyNav = {
+  question: "Question",
+  data: "Data",
+  approach: "Approach",
+  result: "Result",
+  nextTime: "Next time",
+  links: "Links",
+};
+
 export const caseStudies: CaseStudy[] = [
   {
     slug: "southeast-asia-financial-flows",
