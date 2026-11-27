@@ -59,7 +59,8 @@ export type FlowTab = {
 export const profile = {
   name: "Uy (Herry) Vo",
   shortName: "Herry Vo",
-  logo: "HV 🎣",
+  logo: "HV",
+  logoIcon: "🎣",
   role: "Data Engineering · Math + CS @ Knox College",
   status: "🎣 Seeking Summer 2027 Data Engineering internships",
   email: "syquocuyvo@gmail.com",
@@ -94,7 +95,7 @@ export const profile = {
 export const ui = {
   skipLink: "Skip to content",
   mainNavLabel: "Main",
-  homeLabel: "Herry Vo, back to the source",
+  homeLabel: ", Herry Vo, back to the source",
   resumeButton: "Résumé",
   downloadResume: "Download résumé",
   emailMe: "Email me",

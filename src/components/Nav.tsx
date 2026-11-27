@@ -25,8 +25,10 @@ export function Nav({ active }: { active?: string }) {
         aria-label={ui.mainNavLabel}
         className="mx-auto flex h-full w-full max-w-[1228px] items-center gap-8 px-6 lg:px-16"
       >
-        <a href="/#source" aria-label={ui.homeLabel} className="font-display text-2xl text-foam">
+        <a href="/#source" className="font-display text-2xl text-foam">
           {profile.logo}
+          <span aria-hidden="true"> {profile.logoIcon}</span>
+          <span className="sr-only">{ui.homeLabel}</span>
         </a>
         <ul className="ml-auto flex items-center gap-8">
           {nav.map((item) => {
