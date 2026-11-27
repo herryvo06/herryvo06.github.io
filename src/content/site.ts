@@ -228,7 +228,7 @@ export const caseStudies: CaseStudy[] = [
       src: "/projects/vietnam-remittance-trend.webp",
       alt: "Line chart of remittance inflows to Vietnam from 2000 to 2024, rising from 1,585 to 16,000 million US dollars, with year-on-year declines marked in 2001, 2009, 2012, 2015 and 2020.",
       width: 1200,
-      height: 649,
+      height: 650,
     },
     links: [
       { label: "Repo", url: "https://github.com/herryvo06/Southeast-Asia-Financial-Flows-Analytics" },
