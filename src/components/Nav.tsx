@@ -41,7 +41,7 @@ export function Nav({ active }: { active?: string }) {
             );
           })}
         </ul>
-        <a href={profile.resumeUrl} className={`${btnPrimary} min-h-10 px-5 text-sm`}>
+        <a href={profile.resumeUrl} className={`${btnPrimary} px-5 text-sm`}>
           {ui.resumeButton}
         </a>
       </nav>
