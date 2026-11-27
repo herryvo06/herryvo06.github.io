@@ -4,7 +4,7 @@ import { useId } from "react";
 type Props = {
   /** Closed path of the hill shape. */
   d: string;
-  tone?: "far" | "near";
+  tone?: "far" | "near" | "shore";
   /** Optional open path along the right-hand slopes, drawn as a thin highlight. */
   highlight?: string;
   className?: string;
@@ -13,6 +13,8 @@ type Props = {
 const TONES = {
   far: ["color-mix(in srgb, var(--current) 75%, var(--shallow))", "var(--current)"],
   near: ["var(--current)", "var(--deep)"],
+  /** Foreground land seen against water: darker than the water so the bank reads. */
+  shore: ["color-mix(in srgb, var(--deep) 75%, var(--current))", "var(--deep)"],
 } as const;
 
 export function Hills({ d, tone = "far", highlight, className }: Props) {

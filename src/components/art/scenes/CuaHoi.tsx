@@ -31,7 +31,6 @@ export function CuaHoi({ className }: { className?: string }) {
       <Hills
         tone="far"
         d="M0 104 C70 92 150 98 230 122 C262 132 290 142 320 150 H0 Z"
-        highlight="M150 100 C200 108 260 128 318 149"
       />
       <Tree x={96} y={98} variant={0} scale={0.8} />
       <Tree x={128} y={99} variant={1} scale={0.7} />
@@ -45,7 +44,10 @@ export function CuaHoi({ className }: { className?: string }) {
       </g>
 
       {/* Band 4: near bank, the river mouth opens between the two banks */}
-      <Hills tone="near" d="M0 206 C120 204 230 222 330 244 C360 251 380 256 400 260 H0 Z" highlight="M200 213 C260 222 320 238 398 259" />
+      <Hills
+        tone="shore"
+        d="M0 206 C120 204 230 222 330 244 C360 251 380 256 400 260 H0 Z"
+      />
       <Ripple x={360} y={186} rings={3} spread={18} />
     </svg>
   );
